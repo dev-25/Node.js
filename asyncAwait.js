@@ -2,7 +2,7 @@
 const a = () => {
     return new Promise((resolve,reject) =>{
         setTimeout(() =>{
-            num = '12';
+            num = 12;
             const b = num*num;
             if (b) resolve (b);
             else reject (new Error('Wrong Data'))

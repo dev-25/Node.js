@@ -15,4 +15,5 @@ const errorFirstcallback = (a,b) => {
     }
     console.log('Function executed')
 }
+
 fs.readFile(file, errorFirstcallback);
