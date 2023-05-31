@@ -1,4 +1,4 @@
-
+// Code1
 const a = () => {
     return new Promise((resolve,reject) =>{
         setTimeout(() =>{
@@ -18,5 +18,27 @@ async function myFunction() {
         console.error(error.message);
     }
 }
-
 myFunction();  
+
+
+// Code2
+let f = (c,d) => {
+    return new Promise((resolve,reject) =>{
+        setTimeout(() =>{
+            let add = c+d
+            if (add>5) resolve('True')
+            else reject('False')
+        },3000);
+    })
+}
+
+async function main_functon(c,d) {
+    try {
+        let data = await f(c,d);
+        console.log(data);
+    }
+    catch (error) {
+        console.error(error)
+    }
+}
+main_functon(2,7);
